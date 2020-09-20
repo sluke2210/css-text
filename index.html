@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>css-text</header>
+    <div id="controls">
+<div>
+        <input type="button" name="reset" id="reset" value="Reset" >
+</div>    
+<div>
+        <input type="checkbox" id="underline" name="underline" value="false" onchange="texDec();">
+        <label for="underline">Underline</label>
+</div>
+<div>
+        <input type="checkbox" id="overline" name="overline" value="false" onchange="texDec();">
+        <label for="overline">Overline</label>
+</div>
+<div>
+        <input type="checkbox" id="strikeThrough" name="strikeThrough" value="false" onchange="texDec();">
+        <label for="strikeThrough">strike</label>
+</div>
+<div>
+        <label for="text_justify">Jusitfy</label>
+        <input type="range" min=0 max=2 value=1 step=1 name="text_justify" id="text_justify" >
+</div>
+<div>
+        <label for="font_weight">Font Weight</label>
+        <input type="range" min=100 max=900 value=400 step=100 name="font_weight" id="font_weight" >
+</div>
+<div>
+        <label for="red">text-Red</label>
+        <input type="range" min=0 max=255 value=0 step=1 name="red" id="red" oninput="changeCol();">
+</div>
+<div>
+        <label for="blue">text-Blue</label>
+        <input type="range" min=0 max=255 value=0 step=1 name="blue" id="blue" oninput="changeCol();">
+</div>
+<div>
+        <label for="green">text-Green</label>
+        <input type="range" min=0 max=255 value=0 step=1 name="green" id="green" oninput="changeCol();">
+</div>
+<div>
+        <label for="bg-red">bg-Red</label>
+        <input type="range" min=0 max=255 value=255 step=1 name="bg-red" id="bg-red" oninput="changeBCol();">
+</div>
+    <div>
+        <label for="bg-blue">bg-Blue</label>
+        <input type="range" min=0 max=255 value=255 step=1 name="bg-blue" id="bg-blue" oninput="changeBCol();">
+</div>
+    <div>
+        <label for="bg-green">bg-Green</label>
+        <input type="range" min=0 max=255 value=255 step=1 name="bg-green" id="bg-green" oninput="changeBCol();">
+</div>
+<div>
+        <label for="fontSize">font size</label>
+        <input type="range" min=5 max=200 value=12 step=1 name="fontSize" id="fontSize" oninput="changeSize();">
+</div>
+
+
+    </div>
+    <div id='flex_container'>
+       
+        <div id='textInput'>
+            <textarea name="textarea_name" rows="40" cols="40" id="text_input">holder</textarea>
+        </div>
+        <div id='textOutput'>
+            <p id="innerText"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
